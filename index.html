@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja VIP - Servidor Minecraft</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Servidor Minecraft - Loja VIP</h1>
+        <p>Compre seu VIP e ajude o servidor a crescer!</p>
+    </header>
+
+    <main>
+        <section class="vip-card">
+            <h2>VIP Bronze</h2>
+            <ul>
+                <li>Tag exclusiva</li>
+                <li>Comandos especiais</li>
+                <li>Acesso a kits semanais</li>
+            </ul>
+            <input type="text" placeholder="Seu nick no Minecraft" class="nick-input" id="nick-bronze">
+            <button onclick="comprarVip('bronze')">Comprar com Mercado Pago</button>
+        </section>
+
+        <section class="vip-card">
+            <h2>VIP Prata</h2>
+            <ul>
+                <li>Tudo do VIP Bronze</li>
+                <li>Área exclusiva no spawn</li>
+                <li>Kits melhores</li>
+            </ul>
+            <input type="text" placeholder="Seu nick no Minecraft" class="nick-input" id="nick-prata">
+            <button onclick="comprarVip('prata')">Comprar com Mercado Pago</button>
+        </section>
+
+        <section class="vip-card">
+            <h2>VIP Ouro</h2>
+            <ul>
+                <li>Tudo do VIP Prata</li>
+                <li>Pet personalizado</li>
+                <li>Comando /fly</li>
+            </ul>
+            <input type="text" placeholder="Seu nick no Minecraft" class="nick-input" id="nick-ouro">
+            <button onclick="comprarVip('ouro')">Comprar com Mercado Pago</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Servidor Minecraft. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
