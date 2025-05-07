@@ -1,56 +1,75 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loja VIP - Servidor Minecraft</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SuperVIPs - Servidor Minecraft</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet" />
 </head>
 <body>
-    <header>
-        <h1>Servidor Minecraft - Loja VIP</h1>
-        <p>Compre seu VIP e ajude o servidor a crescer!</p>
-    </header>
+  <header class="animate__animated animate__fadeInDown">
+    <h1>Servidor Minecraft - SuperVIPs</h1>
+    <p>Escolha seu poder: Super, Ultra ou Lendário!</p>
+  </header>
 
-    <main>
-        <section class="vip-card">
-            <h2>VIP Bronze</h2>
-            <ul>
-                <li>Tag exclusiva</li>
-                <li>Comandos especiais</li>
-                <li>Acesso a kits semanais</li>
-            </ul>
-            <input type="text" placeholder="Seu nick no Minecraft" class="nick-input" id="nick-bronze">
-            <button onclick="comprarVip('bronze')">Comprar com Mercado Pago</button>
-        </section>
+  <main>
+    <section class="vip-card animate__animated animate__zoomIn">
+      <h2>VIP Super</h2>
+      <ul>
+        <li>Tag heroica exclusiva</li>
+        <li>Comandos especiais</li>
+        <li>Kit inicial melhorado</li>
+      </ul>
+      <input type="text" placeholder="Seu nick no Minecraft" id="nick-super" />
+      <div class="buttons">
+        <button onclick="abrirModal('super')">Mais informações</button>
+        <button onclick="comprarVip('super')">Comprar</button>
+      </div>
+    </section>
 
-        <section class="vip-card">
-            <h2>VIP Prata</h2>
-            <ul>
-                <li>Tudo do VIP Bronze</li>
-                <li>Área exclusiva no spawn</li>
-                <li>Kits melhores</li>
-            </ul>
-            <input type="text" placeholder="Seu nick no Minecraft" class="nick-input" id="nick-prata">
-            <button onclick="comprarVip('prata')">Comprar com Mercado Pago</button>
-        </section>
+    <section class="vip-card animate__animated animate__zoomIn animate__delay-1s">
+      <h2>VIP Ultra</h2>
+      <ul>
+        <li>Tudo do VIP Super</li>
+        <li>Acesso a área secreta</li>
+        <li>Kits épicos</li>
+      </ul>
+      <input type="text" placeholder="Seu nick no Minecraft" id="nick-ultra" />
+      <div class="buttons">
+        <button onclick="abrirModal('ultra')">Mais informações</button>
+        <button onclick="comprarVip('ultra')">Comprar</button>
+      </div>
+    </section>
 
-        <section class="vip-card">
-            <h2>VIP Ouro</h2>
-            <ul>
-                <li>Tudo do VIP Prata</li>
-                <li>Pet personalizado</li>
-                <li>Comando /fly</li>
-            </ul>
-            <input type="text" placeholder="Seu nick no Minecraft" class="nick-input" id="nick-ouro">
-            <button onclick="comprarVip('ouro')">Comprar com Mercado Pago</button>
-        </section>
-    </main>
+    <section class="vip-card animate__animated animate__zoomIn animate__delay-2s">
+      <h2>VIP Lendário</h2>
+      <ul>
+        <li>Tudo do VIP Ultra</li>
+        <li>Comando /fly e /pet</li>
+        <li>Nome colorido no chat</li>
+      </ul>
+      <input type="text" placeholder="Seu nick no Minecraft" id="nick-lendario" />
+      <div class="buttons">
+        <button onclick="abrirModal('lendario')">Mais informações</button>
+        <button onclick="comprarVip('lendario')">Comprar</button>
+      </div>
+    </section>
+  </main>
 
-    <footer>
-        <p>&copy; 2025 Servidor Minecraft. Todos os direitos reservados.</p>
-    </footer>
+  <!-- Modal -->
+  <div id="vip-modal" class="modal hidden animate__animated animate__fadeIn">
+    <div class="modal-content">
+      <span class="close" onclick="fecharModal()">&times;</span>
+      <h2 id="modal-title"></h2>
+      <p id="modal-body"></p>
+    </div>
+  </div>
 
-    <script src="script.js"></script>
+  <footer class="animate__animated animate__fadeInUp animate__delay-3s">
+    <p>&copy; 2025 SuperVIPs - Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
